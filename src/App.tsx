@@ -274,7 +274,7 @@ function App() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Phone className="h-4 w-4" />
-                  <span>+91 76660 71400</span>
+                  <span>+91 8830232516</span>
                 </div>
               </div>
             </div>
