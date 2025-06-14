@@ -13,7 +13,7 @@ function App() {
               <span className="text-2xl font-bold text-gray-800">Cravzi</span>
             </div>
             <a 
-              href="https://chat.whatsapp.com/K7iWyDF0olE9iyPik0UIB2" 
+              href="https://wa.me/918830232516" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors duration-200 flex items-center space-x-2"
@@ -255,7 +255,7 @@ function App() {
                 Fresh, authentic, and made with love.
               </p>
               <a 
-                href="https://chat.whatsapp.com/K7iWyDF0olE9iyPik0UIB2" 
+                href="https://wa.me/918830232516" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition-colors duration-200 inline-flex items-center space-x-2"
