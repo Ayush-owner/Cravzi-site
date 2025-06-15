@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-hero {
+  background: linear-gradient(120deg, #ffb347, #ff6f91, #ffb347);
+  background-size: 200% 200%;
+  animation: gradient-move 8s ease-in-out infinite;
+}
+
+.animated-gradient-soft-yellow-orange {
+  background: linear-gradient(120deg, #fff59d, #ffd7a7, #fff59d);
+  background-size: 200% 200%;
+  animation: gradient-move 8s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+@keyframes float-medium {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes float-fast {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-24px); }
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+.animate-float-medium {
+  animation: float-medium 4.5s ease-in-out infinite;
+}
+.animate-float-fast {
+  animation: float-fast 3.5s ease-in-out infinite;
+}
