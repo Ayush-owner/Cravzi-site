@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChefHat, Users, Clock, Heart, Star, Phone, Mail, MessageCircle } from 'lucide-react';
+import { ChefHat, Users, Clock, Heart, Star, Phone, Mail, MessageCircle, Search, ShoppingBag, List, Bell, Soup, Wallet } from 'lucide-react';
 
 function App() {
   return (
@@ -75,6 +75,39 @@ function App() {
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-orange-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Cravzi in Numbers</h2>
+            <p className="text-lg text-gray-600">Our growing community at a glance</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+            <div className="flex flex-col items-center bg-green-50 rounded-2xl shadow-lg p-8 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+              <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow">
+                <Users className="w-10 h-10 text-green-500" />
+              </div>
+              <span className="text-4xl font-extrabold text-gray-800 mb-1">100+</span>
+              <span className="text-gray-600 text-lg">Home Cooks</span>
+            </div>
+            <div className="flex flex-col items-center bg-orange-50 rounded-2xl shadow-lg p-8 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+              <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow">
+                <Soup className="w-10 h-10 text-orange-500" />
+              </div>
+              <span className="text-4xl font-extrabold text-gray-800 mb-1">500+</span>
+              <span className="text-gray-600 text-lg">Meals Served</span>
+            </div>
+            <div className="flex flex-col items-center bg-pink-50 rounded-2xl shadow-lg p-8 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+              <div className="bg-pink-100 rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow">
+                <Heart className="w-10 h-10 text-pink-500" />
+              </div>
+              <span className="text-4xl font-extrabold text-gray-800 mb-1">300+</span>
+              <span className="text-gray-600 text-lg">Happy Customers</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How it Works */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,30 +125,26 @@ function App() {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="bg-yellow-300 rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0 mt-1 shadow-md">
-                    {/* Magnifying Glass Icon */}
-                    <svg className="w-6 h-6 text-orange-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <div className="bg-yellow-300 rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                    <Search className="w-6 h-6 text-orange-700" />
                   </div>
                   <p className="text-gray-700">Browse homemade meals from verified cooks in your area</p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="bg-orange-300 rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0 mt-1 shadow-md">
-                    {/* Clock Icon */}
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  <div className="bg-orange-300 rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                    <Clock className="w-6 h-6 text-white" />
                   </div>
                   <p className="text-gray-700">Place your order and specify pickup time</p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="bg-green-300 rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0 mt-1 shadow-md">
-                    {/* Bag Icon */}
-                    <svg className="w-6 h-6 text-green-800" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M6 7V6a6 6 0 1 1 12 0v1"/><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M16 11a4 4 0 0 1-8 0"/></svg>
+                  <div className="bg-green-300 rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                    <ShoppingBag className="w-6 h-6 text-green-800" />
                   </div>
                   <p className="text-gray-700">Pick up fresh, hot meals directly from the cook</p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="bg-yellow-200 rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0 mt-1 shadow-md">
-                    {/* Star Icon */}
-                    <svg className="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 0 0 .95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 0 0-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 0 0-1.175 0l-3.38 2.454c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 0 0-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 0 0 .95-.69l1.286-3.967z"/></svg>
+                  <div className="bg-yellow-200 rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                    <Star className="w-6 h-6 text-yellow-600 fill-yellow-400" />
                   </div>
                   <p className="text-gray-700">Enjoy authentic homemade food and share your review</p>
                 </div>
@@ -130,30 +159,26 @@ function App() {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="bg-green-300 rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0 mt-1 shadow-md">
-                    {/* Menu/Photo Icon */}
-                    <svg className="w-6 h-6 text-green-800" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M4 10h16"/><circle cx="8.5" cy="7.5" r="1.5"/></svg>
+                  <div className="bg-green-300 rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                    <List className="w-6 h-6 text-green-800" />
                   </div>
                   <p className="text-gray-700">Share your daily menu with photos and availability</p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="bg-yellow-300 rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0 mt-1 shadow-md">
-                    {/* Order/Notification Icon */}
-                    <svg className="w-6 h-6 text-yellow-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V7a8 8 0 1 0-16 0v5c0 6 8 10 8 10z"/></svg>
+                  <div className="bg-yellow-300 rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                    <Bell className="w-6 h-6 text-yellow-700" />
                   </div>
                   <p className="text-gray-700">Receive orders from hungry customers nearby</p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="bg-orange-300 rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0 mt-1 shadow-md">
-                    {/* Pot/Meal Icon */}
-                    <svg className="w-6 h-6 text-orange-800" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><ellipse cx="12" cy="8" rx="8" ry="4"/><path d="M4 8v6c0 2.21 3.58 4 8 4s8-1.79 8-4V8"/></svg>
+                  <div className="bg-orange-300 rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                    <Soup className="w-6 h-6 text-orange-800" />
                   </div>
                   <p className="text-gray-700">Prepare extra portions of your family meals</p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="bg-yellow-200 rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0 mt-1 shadow-md">
-                    {/* Money/Heart Icon */}
-                    <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21C12 21 4 13.5 4 8.5C4 5.42 6.42 3 9.5 3C11.24 3 12.91 3.81 14 5.08C15.09 3.81 16.76 3 18.5 3C21.58 3 24 5.42 24 8.5C24 13.5 16 21 16 21H12Z"/></svg>
+                  <div className="bg-yellow-200 rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                    <Wallet className="w-6 h-6 text-yellow-600" />
                   </div>
                   <p className="text-gray-700">Earn money while sharing your love for cooking</p>
                 </div>
@@ -294,11 +319,11 @@ function App() {
               <div className="space-y-2 text-gray-300">
                 <div className="flex items-center space-x-2">
                   <Mail className="h-4 w-4" />
-                  <span>cravziadmin@cravzi.com</span>
+                  <a href="mailto:cravziadmin@cravzi.com" className="hover:underline text-white">cravziadmin@cravzi.com</a>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Phone className="h-4 w-4" />
-                  <span>+91 8830232516</span>
+                  <a href="tel:+918830232516" className="hover:underline text-white">+91 8830232516</a>
                 </div>
               </div>
             </div>
