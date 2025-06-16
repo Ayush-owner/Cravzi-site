@@ -108,6 +108,13 @@ function App() {
         </div>
       </section>
 
+      {/* Wavy Divider */}
+      <div className="-mt-4 mb-4">
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-8">
+          <path fill="#fff" d="M0,32 C360,80 1080,0 1440,48 L1440,80 L0,80 Z" />
+        </svg>
+      </div>
+
       {/* How it Works */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -224,6 +231,13 @@ function App() {
         </div>
       </section>
 
+      {/* Wavy Divider before Why Cravzi */}
+      <div className="-mt-4 mb-4">
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-8">
+          <path fill="#fdf6e3" d="M0,32 C360,80 1080,0 1440,48 L1440,80 L0,80 Z" />
+        </svg>
+      </div>
+
       {/* Testimonials */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -290,6 +304,13 @@ function App() {
         </div>
       </section>
 
+      {/* Wavy Divider before Testimonials */}
+      <div className="-mt-4 mb-4">
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-8">
+          <path fill="#fff" d="M0,32 C360,80 1080,0 1440,48 L1440,80 L0,80 Z" />
+        </svg>
+      </div>
+
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -334,6 +355,13 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* Wavy Divider before Footer */}
+      <div className="-mt-4 mb-4">
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-8">
+          <path fill="#22223b" d="M0,32 C360,80 1080,0 1440,48 L1440,80 L0,80 Z" />
+        </svg>
+      </div>
     </div>
   );
 }
