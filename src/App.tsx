@@ -27,6 +27,17 @@ function App() {
 
       {/* Hero Section */}
       <section className="pt-16 pb-20 animated-gradient-hero relative overflow-hidden">
+        {/* Hero Background Food Image */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <img 
+            src="/food.jpg" 
+            alt="Home-cooked food" 
+            className="w-full h-full object-cover object-center opacity-60 blur-[2px]" 
+            style={{filter: 'brightness(0.95)'}}
+          />
+          {/* Slightly stronger Gradient Overlay */}
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-black/75 via-black/30 to-transparent z-10 pointer-events-none" />
+        </div>
         {/* Floating Ingredient Icons */}
         <svg className="absolute left-8 top-12 w-12 h-12 animate-float-slow opacity-70 z-10" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" fill="#FF6347"/><ellipse cx="32" cy="32" rx="16" ry="8" fill="#fff3"/><ellipse cx="32" cy="38" rx="10" ry="4" fill="#fff5"/></svg> {/* Tomato */}
         <svg className="absolute right-12 top-24 w-10 h-10 animate-float-medium opacity-70 z-10" viewBox="0 0 64 64" fill="none"><rect x="20" y="20" width="24" height="24" rx="12" fill="#FFA500"/><rect x="28" y="16" width="8" height="16" rx="4" fill="#7CFC00"/></svg> {/* Carrot */}
@@ -35,41 +46,43 @@ function App() {
         <svg className="absolute left-1/4 top-32 w-10 h-10 animate-float-medium opacity-70 z-10" viewBox="0 0 64 64" fill="none"><path d="M32 8c8 0 16 8 16 16s-8 16-16 16S16 32 16 24 24 8 32 8z" fill="#FFD93B"/><path d="M32 24l8 8-8 8-8-8 8-8z" fill="#FF6F61"/></svg> {/* Pizza Slice */}
         <svg className="absolute right-1/4 top-10 w-9 h-9 animate-float-slow opacity-60 z-10" viewBox="0 0 64 64" fill="none"><ellipse cx="32" cy="40" rx="12" ry="8" fill="#F7C1D9"/><ellipse cx="32" cy="36" rx="6" ry="3" fill="#fff"/><circle cx="32" cy="32" r="4" fill="#F49AC2"/></svg> {/* Cupcake */}
         <svg className="absolute left-20 bottom-24 w-8 h-8 animate-float-fast opacity-60 z-10" viewBox="0 0 64 64" fill="none"><path d="M32 48c-8-4-12-12-12-20 0-4 4-8 12-8s12 4 12 8c0 8-4 16-12 20z" fill="#7ED957"/><ellipse cx="32" cy="36" rx="6" ry="2" fill="#4CAF50"/></svg> {/* Leafy Green */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+          <div className="text-center flex flex-col items-center">
             <div className="flex justify-center mb-8">
               <div className="bg-white rounded-full p-6 shadow-lg">
                 <ChefHat className="h-16 w-16 text-orange-500" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
-              Home-cooked food,<br />
-              <span className="text-white drop-shadow-lg">one click away.</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-              Connecting passionate home cooks with food lovers in your neighborhood. 
-              Fresh, authentic, and made with love.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSddXqgAhimyc2I1ZUgbVidLcuW_X1CYQ3LH5jCLOk9dZwATcg/viewform?usp=sharing&ouid=101482664821296069192"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-orange-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2 w-full sm:w-auto justify-center"
-              >
-                <span>🍱</span>
-                <span>I want to order tiffin</span>
-              </a>
-              <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLScxl8Gduk6Ab3UnS1hbU97n10AWwHUJu0RmGn_3_IB2fY1JKQ/viewform?usp=dialog"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-green-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2 w-full sm:w-auto justify-center"
-              >
-                <span>👨‍🍳</span>
-                <span>I want to cook with Cravzi</span>
-              </a>
+            {/* Frosted Glass Panel for Text Contrast */}
+            <div className="relative inline-block w-full max-w-2xl">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)]">
+                Home-cooked food,<br />
+                <span className="text-orange-400 drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">one click away.</span>
+              </h1>
+              <p className="text-xl text-white mb-12 drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
+                Connecting passionate home cooks with food lovers in your neighborhood. <br />
+                Fresh, authentic, and made with love.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSddXqgAhimyc2I1ZUgbVidLcuW_X1CYQ3LH5jCLOk9dZwATcg/viewform?usp=sharing&ouid=101482664821296069192"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-orange-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2 w-full sm:w-auto justify-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]"
+                >
+                  <span>🍱</span>
+                  <span>I want to order tiffin</span>
+                </a>
+                <a 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScxl8Gduk6Ab3UnS1hbU97n10AWwHUJu0RmGn_3_IB2fY1JKQ/viewform?usp=dialog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2 w-full sm:w-auto justify-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]"
+                >
+                  <span>👨‍🍳</span>
+                  <span>I want to cook with Cravzi</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
